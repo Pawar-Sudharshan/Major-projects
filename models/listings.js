@@ -19,6 +19,7 @@ const listingsSchema = new mongoose.Schema({
   },
   img: {
     type: String,
+    default: "https://unsplash.com/photos/the-sun-is-setting-over-the-mountains-in-the-distance-RsCvxI9h2Ew",
    set : (v) => v === ""?"https://unsplash.com/photos/the-sun-is-setting-over-the-mountains-in-the-distance-RsCvxI9h2Ew":v
   },
   price: {
