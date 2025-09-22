@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
-const dotenv = require("dotenv");
-dotenv.config();
-console.log("Mongo URI is: ", process.env.MONGO_URL);
+// const dotenv = require("dotenv");
+// dotenv.config();
+// console.log("Mongo URI is: ", process.env.MONGO_URL);
+MONGO_URL = "mongodb+srv://thikkalboys_db_user:7xCd4ozaYzz4dMFT@cluster0.tyigaei.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(MONGO_URL)
   .then(() => console.log('Connected to MongoDB Atlas'))
   .catch((err) => console.error(err));
 
