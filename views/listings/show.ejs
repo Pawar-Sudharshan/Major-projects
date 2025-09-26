@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Show List</title>
+</head>
+
+<body>
+  <h2>List Details</h2>
+  <ul>
+    <strong>Title:</strong>
+    <%= list.title %> <br>
+      <strong>Description:</strong>
+      <%= list.dec %> <br>
+        <strong>Price:</strong>
+        ₹ <%= list.price.toLocaleString("en-IN") %> <br>
+          <strong>State:</strong>
+          <%= list.state %> <br>
+            <strong>Country:</strong>
+            <%= list.country %>
+  </ul>
+</body>
+
+</html>
