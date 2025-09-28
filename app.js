@@ -3,7 +3,9 @@ const app = express();
 const mongoose = require("mongoose");
 const listing = require("./models/listings.js");
 const path = require("path");
+const methodOverride = require("method-override");
 
+// MongoDB URL and connection
 const MONGO_URL = "mongodb+srv://thikkalboys_db_user:7xCd4ozaYzz4dMFT@cluster0.tyigaei.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 main()
@@ -21,11 +23,11 @@ async function main() {
   }
 }
 
-// Set view engine and views directory
+// Middleware setup
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-// Use express urlencoded parser (fix here!)
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); // <--- required for form parsing
+app.use(methodOverride('_method')); // <--- required for method-override
 
 app.get("/", (req, res) => {
   res.send("route is working.");
@@ -46,7 +48,6 @@ app.get("/listings/new", (req, res) => {
   res.render("listings/new");
 });
 
-
 // Show individual listing
 app.get("/listings/:id", async (req, res) => {
   let { id } = req.params;
@@ -58,11 +59,11 @@ app.get("/listings/:id", async (req, res) => {
   }
 });
 
-// Handle form submission for new listing (add this)
+// Add new listing
 app.post("/listings", async (req, res) => {
   try {
-    const { title, desc, price, state, country, img } = req.body;
-    const newListing = new listing({ title, desc, price, state, country, img });
+    const listingData = req.body.listings;
+    const newListing = new listing(listingData);
     await newListing.save();
     res.redirect("/listings");
   } catch (err) {
@@ -70,6 +71,41 @@ app.post("/listings", async (req, res) => {
   }
 });
 
+// Edit form route
+app.get("/listings/:id/edit", async (req, res) => {
+  let { id } = req.params;
+  try {
+    const list = await listing.findById(id);
+    res.render("listings/edit", { list });
+  } catch (err) {
+    res.status(500).send("Error fetching listings");
+  }
+});
+
+// PUT route for editing listing
+app.put("/listings/:id", async (req, res) => {
+  let { id } = req.params;
+  try {
+    const listingData = req.body.listings;
+    await listing.findByIdAndUpdate(id, listingData);
+    res.redirect(`/listings/${id}`);
+  } catch (err) {
+    res.status(500).send("Could not update listing");
+  }
+});
+
+app.delete("/listings/:id", async (req, res) => {
+  let { id } = req.params;
+  // console.log("Delete route reached"+ id);
+  try {
+    await listing.findByIdAndDelete(id);
+    res.redirect("/listings");
+  } catch (err) {
+    res.status(500).send("Could not delete listing");
+  }
+});
+
+// Start the server
 app.listen(8080, () => {
   console.log("server is running.");
 });

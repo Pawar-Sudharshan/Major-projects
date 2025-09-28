@@ -12,14 +12,22 @@
     <strong>Title:</strong>
     <%= list.title %> <br>
       <strong>Description:</strong>
-      <%= list.dec %> <br>
+      <%= list.des %> <br>
         <strong>Price:</strong>
-        ₹ <%= list.price.toLocaleString("en-IN") %> <br>
+        ₹ <%= list.price %> <br> <!-- REMOVED .toLocaleString("en-IN") -->
           <strong>State:</strong>
           <%= list.state %> <br>
             <strong>Country:</strong>
             <%= list.country %>
   </ul>
+  <a href="/listings/<%= list._id %>/edit">edit</a>
+  <br>
+  <br>
+ 
+  <form action="/listings/<%= list._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete</button>
+  </form>
+
 </body>
 
 </html>
