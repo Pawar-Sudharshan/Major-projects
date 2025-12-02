@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const listing = require("./models/listings.js");
 const path = require("path");
 const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");
 
 // MongoDB URL and connection
 const MONGO_URL = "mongodb+srv://thikkalboys_db_user:7xCd4ozaYzz4dMFT@cluster0.tyigaei.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -28,6 +29,9 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true })); // <--- required for form parsing
 app.use(methodOverride('_method')); // <--- required for method-override
+app.engine("ejs", ejsMate);
+app.use(express.static(path.join(__dirname, "public")));
+
 
 app.get("/", (req, res) => {
   res.send("route is working.");
