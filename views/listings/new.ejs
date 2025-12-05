@@ -1,38 +1,42 @@
-
 <% layout('layouts/boilerplate') -%>
 
-<body>
-    <div class="container py-4">
-        <h2>Create New Listing</h2>
+    <body>
+        <div class="container py-4 col-md-8 offset-2">
+            <h2>Create New Listing</h2>
+            <br> <br>
+            <form action="/listings" method="POST">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="listings[title]" id="title" required class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="des" class="form-label">Description</label>
+                    <textarea name="listings[des]" id="des" required class="form-control"></textarea>
+                </div>
 
-        <form action="/listings" method="POST">
-            <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
-                <input type="text" name="listings[title]" id="title" required class="form-control">
-            </div>
-            <div class="mb-3">
-                <label for="des" class="form-label">Description</label>
-                <textarea name="listings[des]" id="des" required class="form-control"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="price" class="form-label">Price</label>
-                <input type="number" name="listings[price]" id="price" required class="form-control">
-            </div>
-            <div class="mb-3">
-                <label for="state" class="form-label">State</label>
-                <input type="text" name="listings[state]" id="state" required class="form-control">
-            </div>
-            <div class="mb-3">
-                <label for="country" class="form-label">Country</label>
-                <input type="text" name="listings[country]" id="country" required class="form-control">
-            </div>
-            <div class="mb-3">
-                <label for="image" class="form-label">Image (Upload a file or paste URL)</label>
-                <input type="file" name="listings[imageFile]" id="imageFile" class="form-control mb-2">
-                <input type="url" name="listings[img]" id="img" placeholder="Or paste image URL" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-primary">Save</button>
-        </form>
+                <div class="col-md-12 p-0 d-flex gap-4">
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" name="listings[price]" id="price" required class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="state" class="form-label">State</label>
+                        <input type="text" name="listings[state]" id="state" required class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" name="listings[country]" id="country" required class="form-control">
+                    </div>
+                </div>
 
-    </div>
-</body>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image (Upload a file or paste URL)</label>
+                    <input type="file" name="listings[imageFile]" id="imageFile" class="form-control mb-2">
+                    <input type="url" name="listings[img]" id="img" placeholder="Or paste image URL"
+                        class="form-control">
+                </div>
+                <button type="submit" class="btn btn-danger">Save</button>
+            </form>
+
+        </div>
+    </body>

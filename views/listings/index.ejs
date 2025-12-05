@@ -1,24 +1,28 @@
-
 <% layout('layouts/boilerplate') -%>
-<body>
-  <div class="container py-4">
-    <h3 class="mb-4">All listings.</h3>
 
-    <form action="/listings/new" method="GET" class="mb-4">
-      <a href="/listings/new" class="btn btn-primary mb-4">Create New Listing</a>
-    </form>
+  <body>
+    <div class="container py-4">
+      <h3 class="mb-4">All listings.</h3>
 
-    <ul class="list-group">
-
-      <% listings.forEach(listing=> { %>
-        <li class="list-group-item">
-          <a href="/listings/<%= listing._id %>">
-            <%= listing.title %>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4">
+        <% for (let i=0; i < listings.length; i++) { %>
+          <a href="/listings/<%= listings[i]._id %>" class="text-decoration-none text-dark">
+            <div class="col">
+              <div class="card " syle="width: 18rem;">
+                <img src="<%= listings[i].img %>" class="card-img-top" alt="...">
+                <div class="card-img-overlay"> </div>
+                <div class="card-body">
+                  <b class="card-title">
+                    <%= listings[i].title %>
+                  </b>
+                  <p class="card-pricing mb-0">₹ <%= listings[i].price %>
+                  </p>
+                </div>
+              </div>
+            </div>
           </a>
-        </li>
-        <% }) %>
-    </ul>
+          <% } %>
+      </div>
 
-  </div>
-
-</body>
+    </div>
+  </body>
