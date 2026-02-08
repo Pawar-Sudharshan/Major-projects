@@ -95,6 +95,167 @@ const sampleListings = [
     state: "Fiji",
     country: "Fiji"
   },
+    {
+    title: "Clifftop Infinity Pool Resort",
+    des: "Perched on a dramatic cliff, this resort features an infinity pool that seems to melt into the ocean horizon.",
+    img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=60",
+    price: 3200,
+    state: "Santorini",
+    country: "Greece"
+  },
+  {
+    title: "Desert Oasis Resort",
+    des: "Relax in a lush oasis surrounded by golden sand dunes and star-filled skies at night.",
+    img: "https://images.unsplash.com/photo-1543342386-1c8b52328629?auto=format&fit=crop&w=800&q=60",
+    price: 2100,
+    state: "Dubai",
+    country: "United Arab Emirates"
+  },
+  {
+    title: "Urban Boutique Hotel",
+    des: "A chic boutique stay with designer interiors, perfect for foodies and nightlife lovers.",
+    img: "https://images.unsplash.com/photo-1559599101-7466fe601f5a?auto=format&fit=crop&w=800&q=60",
+    price: 1600,
+    state: "Berlin",
+    country: "Germany"
+  },
+  {
+    title: "Lakeview Glass Cabin",
+    des: "Floor-to-ceiling windows offer uninterrupted views of the tranquil lake and surrounding forest.",
+    img: "https://images.unsplash.com/photo-1519817650390-64a93db511aa?auto=format&fit=crop&w=800&q=60",
+    price: 2200,
+    state: "Queenstown",
+    country: "New Zealand"
+  },
+  {
+    title: "Tropical Overwater Bungalow",
+    des: "Wake up above crystal-clear waters and snorkel right from your private terrace.",
+    img: "https://images.unsplash.com/photo-1501117716987-c8e1ecb2108a?auto=format&fit=crop&w=800&q=60",
+    price: 4500,
+    state: "Bora Bora",
+    country: "French Polynesia"
+  },
+  {
+    title: "Countryside Farmstay",
+    des: "Experience country life with fresh farm-to-table meals and peaceful green fields.",
+    img: "https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?auto=format&fit=crop&w=800&q=60",
+    price: 900,
+    state: "Cotswolds",
+    country: "United Kingdom"
+  },
+  {
+    title: "Art Deco City Hotel",
+    des: "Stay in a restored Art Deco landmark with stylish rooms and a rooftop bar.",
+    img: "https://images.unsplash.com/photo-1501117716987-c8e1ecb2108a?auto=format&fit=crop&w=800&q=60",
+    price: 1700,
+    state: "Miami",
+    country: "United States"
+  },
+  {
+    title: "Riverside Ryokan Retreat",
+    des: "Traditional Japanese hospitality with tatami rooms, hot springs, and river views.",
+    img: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=60",
+    price: 2400,
+    state: "Kyoto",
+    country: "Japan"
+  },
+  {
+    title: "Forest Eco-Lodge",
+    des: "An eco-friendly lodge nestled deep within a lush rainforest teeming with wildlife.",
+    img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60",
+    price: 1900,
+    state: "Ubud",
+    country: "Indonesia"
+  },
+  {
+    title: "Snowy Nordic Cabin",
+    des: "Cozy up by the fireplace and chase the Northern Lights from this remote cabin.",
+    img: "https://images.unsplash.com/photo-1519817650390-64a93db511aa?auto=format&fit=crop&w=800&q=60",
+    price: 2300,
+    state: "Lapland",
+    country: "Finland"
+  },
+  {
+    title: "Mediterranean Seaside Hotel",
+    des: "Sun-drenched balconies, azure waters, and charming coastal alleys to explore.",
+    img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=60",
+    price: 2100,
+    state: "Nice",
+    country: "France"
+  },
+  {
+    title: "City Center Business Hotel",
+    des: "Modern amenities, conference spaces, and easy access to major commercial hubs.",
+    img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60",
+    price: 1400,
+    state: "Singapore",
+    country: "Singapore"
+  },
+  {
+    title: "Heritage Palace Stay",
+    des: "Live like royalty in a former palace with courtyards, arches, and grand halls.",
+    img: "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=800&q=60",
+    price: 2600,
+    state: "Jaipur",
+    country: "India"
+  },
+  {
+    title: "Clifftop Jungle Resort",
+    des: "Enjoy sweeping valley views from your private plunge pool in the treetops.",
+    img: "https://images.unsplash.com/photo-1534131707746-25d604851a1f?auto=format&fit=crop&w=800&q=60",
+    price: 2800,
+    state: "Chiang Mai",
+    country: "Thailand"
+  },
+  {
+    title: "Winery Estate Lodge",
+    des: "Stay among rolling vineyards and sample award-winning wines right at the source.",
+    img: "https://images.unsplash.com/photo-1439130490301-25e322d88054?auto=format&fit=crop&w=800&q=60",
+    price: 2300,
+    state: "Napa Valley",
+    country: "United States"
+  },
+  {
+    title: "Harborfront Marina Hotel",
+    des: "Watch yachts drift by from your balcony and stroll along the bustling promenade.",
+    img: "https://images.unsplash.com/photo-1519821172141-b5d8c7f6b9ab?auto=format&fit=crop&w=800&q=60",
+    price: 1850,
+    state: "Sydney",
+    country: "Australia"
+  },
+  {
+    title: "Alpine Wellness Resort",
+    des: "Thermal spas, mountain air, and panoramic views make this the perfect wellness escape.",
+    img: "https://images.unsplash.com/photo-1534131707746-25d604851a1f?auto=format&fit=crop&w=800&q=60",
+    price: 2900,
+    state: "Zermatt",
+    country: "Switzerland"
+  },
+  {
+    title: "Historic Old Town Inn",
+    des: "Charming cobblestone streets, local cafes, and a centuries-old inn to call home.",
+    img: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=800&q=60",
+    price: 1300,
+    state: "Prague",
+    country: "Czech Republic"
+  },
+  {
+    title: "Beach Yoga Retreat",
+    des: "Start your day with sunrise yoga sessions on a quiet, pristine beach.",
+    img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=60",
+    price: 1750,
+    state: "Goa",
+    country: "India"
+  },
+  {
+    title: "Island Surf Lodge",
+    des: "A laid-back lodge steps from world-class surf breaks, ideal for adventure seekers.",
+    img: "https://images.unsplash.com/photo-1518834356753-68b0d65af140?auto=format&fit=crop&w=800&q=60",
+    price: 1600,
+    state: "Honolulu",
+    country: "United States"
+  }
+
   // ...repeat for all remaining listings, following this transformation
 ];
 
